@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500&display=swap");
+
+html {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Josefin Sans", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: aliceblue;
+  background-image: url(img/daywall.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1 {
+  text-align: center;
+  width: 100%;
+  color: black;
+  transition: 2s;
+}
+
+#data1:valid,
+#data2:valid {
+  cursor: pointer;
+}
+
+.container {
+  padding: 10px 10px 20px 10px;
+  color: white;
+  height: auto;
+  width: 60%;
+  background-color: antiquewhite;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.397);
+  border-radius: 16px;
+  box-shadow: 0 4px 60px 8px rgba(255, 255, 255, 0.151) inset;
+}
+.from-To {
+  display: flex;
+  width: 101%;
+}
+
+#fromBox {
+  margin: 20px 10px;
+  font-size: 15px;
+  text-align: left;
+  width: 95%;
+  padding: 10px;
+}
+#toBox {
+  margin: 20px 10px;
+  font-size: 15px;
+  text-align: left;
+  width: 95%;
+  padding: 10px;
+}
+#data1,
+#data2 {
+  height: 90%;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.input {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#input {
+  width: 95%;
+  height: 50px;
+  border-radius: 10px;
+  border-style: none;
+  letter-spacing: 2px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+#input:placeholder-shown {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+label {
+  text-align: left;
+  font-size: 20px;
+}
+
+#btnBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px 20px;
+}
+#reset,
+#swapBtn,
+#converBtn {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border-style: none;
+  background-color: #a5959533;
+  color: aliceblue;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#reset:focus,
+#swapBtn:focus,
+#converBtn:focus {
+  border: 2px solid rgba(255, 235, 205, 0.493);
+}
+#reset:hover,
+#swapBtn:hover,
+#converBtn:hover {
+  background: #a5959533;
+  scale: 0.95;
+  box-shadow: 0 0px 15px 1px rgba(245, 245, 245, 0.295) inset;
+}
+#reset:active,
+#swapBtn:active,
+#converBtn:active {
+  scale: 0.95;
+  transition: 0.1s;
+  font-size: 15px;
+}
+
+#output {
+  height: 90px;
+  width: 95%;
+  border-radius: 10px;
+  padding: 10px;
+  letter-spacing: 2px;
+  font-size: 25px;
+  font-weight: bold;
+}
+.output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#output:placeholder-shown {
+  text-align: center;
+  color: rgb(218, 25, 25);
+  background: #a5959533;
+}
+.mode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+.day,
+.night {
+  transition: 2s;
+}
+
+/* Dynamic Css */
+.reverse {
+  transform: rotate(90deg);
+  transition: 2s;
+}
+.err {
+  color: red;
+  border: 2px solid red;
+}
+.success {
+  border: 2px solid lightgreen;
+  color: black;
+}
+.dayWall {
+  background-image: url(img/daywall.jpg);
+  color: #000;
+  transition: 2s;
+}
+.nightWall {
+  background-image: url(img/nightwall.jpg);
+  color: #fff;
+  transition: 2s;
+}
+.blackFont {
+  color: black;
+}
+.whiteFont {
+  color: white;
+}
+.bgNight {
+  background: rgba(0, 0, 0, 0.5);
+}
+.none {
+  border: none;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .container {
+    height: 100%;
+    width: 90%;
+    margin: 0%;
+  }
+  h1 {
+    margin-bottom: 50px;
+  }
+  #fromBox,
+  #toBox {
+    margin: 0px 0px;
+  }
+  .input {
+    margin-top: 50px;
+    width: 100%;
+  }
+  #reset,
+  #swapBtn,
+  #converBtn {
+    margin-top: 20px;
+    height: 30px;
+    width: 90px;
+  }
+  #output {
+    margin-top: 30px;
+    font-weight: bold;
+  }
+}
